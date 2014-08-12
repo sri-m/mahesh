@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mahi</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="templatemo_header_wrapper">
+<!--  Free Web Templates by TemplateMo.com  -->
+  <div id="templatemo_header">
+    
+   	<%= render :partial => "colleges/logo" %>
+        
+		<%= render :partial => "colleges/home" %>
+    
+    </div>  <!-- end of header -->
+</div> <!-- end of header wrapper -->
+
+<%= render :partial => "colleges/banner" %>
+
+<div id="templatemo_content_wrapper">
+	<div id="templatemo_content">
+    
+    	<div id="column_w530">
+        	
+            <%= yield %>
+        </div>
+        
+        <div id="column_w300">
+        
+        	<%= render :partial => "colleges/latestnews" %>
+        </div>
+    
+    	<div class="cleaner"></div>
+    </div> <!-- end of content wrapper -->
+</div> <!-- end of content wrapper -->
+
+<%= render partial: "colleges/footer" %>
+</body>
+</html>
